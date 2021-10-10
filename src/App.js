@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import out from '@/assets/out.glb';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './index.scss';
+
+export default function App() {
+    return (
+        <div className={'container'}>
+            <model-viewer
+                style={{width: '100%', height: '100%'}}
+                src={out} alt="A 3D model of an astronaut" ar
+                ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate
+                camera-controls/>
+        </div>
+    )
 }
-
-export default App;
